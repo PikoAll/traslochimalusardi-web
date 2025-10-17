@@ -3183,11 +3183,11 @@ body.landing #page-wrapper {
     background-repeat: no-repeat; /* Assicurati che l'immagine non si ripeta */
     /* MODIFICATO: Rimpicciolisci l'immagine al 80% della larghezza del banner.
        Puoi regolare '80%' (es. 75%, 70%) se vuoi rimpicciolirla ancora di più. */
-    background-size: 70% auto; /* L'intera immagine del logo sarà visibile, rimpicciolita */
+    background-size: 40% auto; /* L'intera immagine del logo sarà visibile, rimpicciolita */
     color: transparent; /* Nasconde qualsiasi potenziale testo residuo */
     
     /* Regola il padding per definire l'altezza del banner. */
-    padding: 12em 0; /* Regola questo valore per l'altezza desiderata del banner */
+    padding: 8em 0; /* Regola questo valore per l'altezza desiderata del banner */
     
     text-align: center; /* Centra il contenuto */
     display: flex; /* Utilizza flexbox per centrare il contenuto (se ci fosse) verticalmente */
@@ -3328,70 +3328,58 @@ body.landing #page-wrapper {
 				}
 
 /* CTA */
+#cta {
+    /* Impostiamo il giallo tenue come sfondo */
+    background: #FFEF9E; /* Giallo tenue */
+    color: #414ab7; /* Testo Blu scuro (colore del logo) */
+    /* Riduciamo il padding verticale del contenitore CTA per "stringerlo" leggermente */
+    padding: 2.5em 0 3em 0; /* Ridotto leggermente rispetto a 3.5em 0 4em 0 */
+}
 
-	#cta {
-		background: #e89980;
-		color: #f9e6df;
-		padding: 3.5em 0 4em 0;
-		text-align: center;
-	}
+    #cta h2 {
+        color: #414ab7; 
+        max-width: 80%; /* NUOVO: Ristringiamo leggermente il testo H2 */
+        margin: 0 auto 0.5em auto; /* Centratura del titolo */
+        text-align: center; /* NUOVO: Forza la centratura del testo H2 */
+    }
 
-		#cta h2, #cta h3, #cta h4, #cta h5, #cta h6 {
-			color: inherit;
-		}
+    #cta p {
+        color: #414ab7; 
+        max-width: 70%; /* NUOVO: Ristringiamo leggermente il paragrafo */
+        margin: 0 auto 1.5em auto; /* Centratura del paragrafo */
+        text-align: center; /* NUOVO: Forza la centratura del testo paragrafo */
+    }
 
-		#cta form {
-			margin: 0 auto;
-			max-width: 100%;
-			width: 25em;
-		}
+    /* Centratura e Ristringimento della FORM */
+    #cta form {
+        margin: 0 auto 1.5em auto; /* Centra la form e aggiunge spazio sotto */
+        max-width: 25em; /* LARGHEZZA STANDARD: 25em era la larghezza ideale della form in main.css */
+        width: 90%; /* Assicura che si stringa bene su mobile */
+    }
 
-		#cta input[type="submit"],
-		#cta input[type="reset"],
-		#cta input[type="button"],
-		#cta .button {
-			box-shadow: none;
-			background: #fff;
-			color: #e89980;
-		}
 
-		#cta input[type="text"],
-		#cta input[type="password"],
-		#cta input[type="email"],
-		#cta select,
-		#cta textarea {
-			color: #ffffff;
-			background: rgba(255, 255, 255, 0.15);
-			border: 0;
-		}
+    /* Stile per il pulsante 'Invia Richiesta' */
+    #cta input[type="submit"], 
+    #cta .button {
+        background: #414ab7; 
+        color: #fff !important; 
+        box-shadow: none;
+        padding: 0 1.5em; 
+        min-width: 12em; 
+    }
 
-			#cta input[type="text"]:focus,
-			#cta input[type="password"]:focus,
-			#cta input[type="email"]:focus,
-			#cta select:focus,
-			#cta textarea:focus {
-				box-shadow: inset 0 0 0 2px #fff;
-			}
+    /* Centratura del testo "Oppure chiamaci direttamente" */
+    #cta > p:last-of-type {
+        text-align: center;
+        margin-top: 0.5em; 
+    }
 
-		#cta ::-webkit-input-placeholder {
-			color: rgba(255, 255, 255, 0.75) !important;
-		}
-
-		#cta :-moz-placeholder {
-			color: rgba(255, 255, 255, 0.75) !important;
-		}
-
-		#cta ::-moz-placeholder {
-			color: rgba(255, 255, 255, 0.75) !important;
-		}
-
-		#cta :-ms-input-placeholder {
-			color: rgba(255, 255, 255, 0.75) !important;
-		}
-
-		#cta .formerize-placeholder {
-			color: rgba(255, 255, 255, 0.75) !important;
-		}
+    /* Correzione della Form CTA: la larghezza e l'allineamento del campo email e bottone */
+    /* Dobbiamo farli comportare come una griglia centrata (il template usa .row, quindi dovrebbe bastare .row.aln-center) */
+    #cta form .row {
+        justify-content: center; /* Forza la centratura orizzontale degli elementi (email + bottone) */
+        align-items: center;
+    }
 
 /* Wide */
 
@@ -3875,7 +3863,7 @@ body.landing #page-wrapper {
 			.box {
 				border-radius: 0;
 				box-shadow: none;
-				margin: 1em 0 0 0;
+				margin: 0em 0 0 0;
 				padding: 3em 1em !important;
 			}
 
@@ -3925,33 +3913,22 @@ body.landing #page-wrapper {
 	}
 
 /* Stili per la Galleria Immagini */
+/* 2. CORREZIONE GALLERIA IMMAGINI (SLICK CAROUSEL) */
+/* Settiamo l'altezza del contenitore alla dimensione ideale 16:9 */
 .galleria-malusardi {
-    max-width: 100%; /* Larghezza massima del contenitore della galleria (regola se necessario) */
-    margin: auto auto; /* Centra il contenitore della galleria */
-    overflow: hidden; /* Assicura che le immagini non escano dal contenitore */
-    position: relative; /* Necessario per il posizionamento degli elementi figli (immagini) */
-
-    /* IMPOSTAZIONI PER L'ALTEZZA FISSA DEL CONTENITORE */
-    height: 400px; /* Altezza fissa del contenitore della galleria. REGOLA QUESTO VALORE. */
-    background-color: #ffffff; /* Sfondo bianco per riempire gli spazi vuoti attorno all'immagine */
+    max-width: 100%; 
+    height: 640px; /* Altezza fissata sull'altezza delle immagini 960x540px */
+    margin: 0 auto;
+    overflow: hidden; 
     border-radius: 6px; 
-    box-shadow: 0 2px 0 0 #e5e5e5;
-    
-    /* Aggiunto per allineare l'immagine al centro del contenitore */
-    display: flex;
-    align-items: center; /* Centra verticalmente l'immagine */
-    justify-content: center; /* Centra orizzontalmente l'immagine */
 }
 
-.galleria-malusardi img {
-    /* L'immagine deve adattarsi all'altezza fissa del contenitore mantenendo le proporzioni */
-    width: 100%; /* L'immagine prende il 100% della larghezza disponibile nel suo contenitore */
-    height: 100%; /* L'immagine prende il 100% dell'altezza fissa del suo contenitore */
-    object-fit: contain; /* CRUCIALE: Mostra l'intera immagine senza tagli. */
-    display: block; /* Rimuove lo spazio extra sotto l'immagine */
-    margin: 0 auto; /* Centra l'immagine all'interno dello spazio disponibile */
-    border-radius: 0; 
-    box-shadow: none; 
+/* Forziamo l'immagine a riempire il contenitore (funziona solo se le foto sono 16:9) */
+.galleria-malusardi div img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; /* Riempie il contenitore. */
+    display: block; 
 }
 
 /* Stili per le frecce e i puntini di navigazione di Slick */
@@ -3989,7 +3966,49 @@ body.landing #page-wrapper {
 /* Media query per mobile: la galleria tornerà a essere più ampia */
 @media screen and (max-width: 768px) {
     .galleria-malusardi {
-        max-width: 90%; 
         height: 300px; /* Altezza fissa ridotta per mobile. REGOLA ANCHE QUESTO. */
+    }
+}
+
+/* 5. CORREZIONE PULSANTE GALLERIA (nuove regole) */
+.galleria-button {
+    /* CORREZIONE PUNTINO E CENTRATURA VISIVA */
+    list-style: none !important; /* Rimuove il puntino (list marker) */
+    padding-left: 0 !important; /* Rimuove il padding di default di ul */
+    text-align: center; /* Centra il testo (e quindi il pulsante) */
+    
+    /* Imposta una larghezza massima per il pulsante */
+    max-width: 16em; 
+    margin: 0 auto; /* Centra il contenitore ul stesso */
+    display: block !important;
+}
+
+.galleria-button li {
+    padding: 0 !important; /* Rimuove padding in eccesso */
+    display: inline-block !important; /* Assicura che l'elemento sia trattato inline per la centratura */
+}
+
+/* Regole per il pulsante 'alt' della galleria */
+.galleria-button .button.alt {
+    /* Il colore base del pulsante ALT è grigio/trasparente con testo grigio in main.css */
+    /* Lo facciamo diventare blu al passaggio del mouse (hover) */
+    box-shadow: inset 0 0 0 2px #414ab7; /* Bordo blu */
+    color: #414ab7 !important; /* Testo blu */
+    background-color: transparent !important;
+}
+
+.galleria-button .button.alt:hover {
+    background-color: #414ab7 !important; /* Sfondo Blu scuro all'hover */
+    color: #fff !important; /* Testo bianco all'hover */
+    box-shadow: none !important;
+}
+
+
+/* 6. CORREZIONE SPACING MOBILE DEL PULSANTE GALLERIA */
+@media screen and (max-width: 736px) {
+    /* Il template ha un margin-top: 2em in linea. 
+       Qui lo riduciamo per schermi piccoli (si applica alla ul.actions) */
+    .galleria-button {
+        margin-top: -5em !important; /* Riduciamo lo spazio da 2em a 1em per il mobile */
     }
 }
