@@ -112,25 +112,25 @@
                 </header>
 
                 <div class="box">
-                    <form method="POST" action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID">
+                    <form method="post" action="mailto:INDIRIZZO@EMAIL.IT?subject=Nuova Richiesta Preventivo da Sito Web" enctype="text/plain" id="contact-form">
                         <div class="row gtr-50 gtr-uniform">
 
                             <div class="col-6 col-12-mobilep">
-                                <input type="text" name="name" id="name" value=""
+                                <input type="text" name="nome" id="name" value=""
                                     placeholder="Nome e Cognome / Nome Azienda" required />
                             </div>
                             <div class="col-6 col-12-mobilep">
-                                <input type="email" name="_replyto" id="email" value=""
+                                <input type="email" name="email" id="email" value=""
                                     placeholder="Email (obbligatoria)" required />
                             </div>
 
                             <div class="col-6 col-12-mobilep">
-                                <input type="text" name="phone" id="phone" value=""
+                                <input type="text" name="numero telefonico" id="phone" value=""
                                     placeholder="Telefono (obbligatorio)" required />
                             </div>
                             <div class="col-6 col-12-mobilep">
                                 <div class="select-wrapper">
-                                    <select name="service_type" id="service_type" required>
+                                    <select name="tipologia di servizio" id="service_type" required>
                                         <option value="">- Seleziona Tipo di Servizio -</option>
                                         <option value="Trasloco Completo">Trasloco Completo (Casa/Ufficio)</option>
                                         <option value="Sgombero">Sgombero (Cantina/Soffitta/Ufficio)</option>
@@ -142,20 +142,20 @@
 
                             <div class="col-12">
                                 <label>Dettagli dell'Intervento (Città, Piani, Metri Cubi stimati, Urgenza):</label>
-                                <textarea name="message" id="message"
+                                <textarea name="descrizione" id="message"
                                     placeholder="Descrivi il tuo trasloco/sgombero. Indica la città di partenza/arrivo, i piani, e se hai bisogno di un preventivo urgente."
                                     rows="6" required></textarea>
                             </div>
 
-                            <input type="hidden" name="_subject"
-                                value="Nuova Richiesta Preventivo da traslochimalusardi.it" />
+                            <input type="hidden" name=""
+                                value="" />
 
                             <div class="col-12">
                                 <ul class="actions special">
                                     <li><input type="submit" value="Invia Richiesta Preventivo" class="primary" /></li>
                                 </ul>
                             </div>
-                        </div> 
+                        </div>
                     </form>
                 </div>
 
@@ -171,7 +171,7 @@
                     <li>&copy; 2025 F.LLI MALUSARDI. Tutti i diritti riservati.</li>
                     <!-- AZIONE: Reso il numero cliccabile per mobile nel footer -->
                     <li>Telefono: <a href="tel:+393475914973"><strong>347 5914973</strong></a></li>
-                    <li>Sito realizzato da : <a href="https://pikobit.it/">PikoBit</a></li>
+                    <li>Sito realizzato da : <a href="https://pikobit.it/"><strong>PikoBit</strong></a></li>
                     <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
                 </ul>
             </footer>
