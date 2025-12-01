@@ -4,7 +4,7 @@ import re
 # Definizione della nuova versione (Aggiornare manualmente prima del push)
 # Il formato è Anno.Mese.Giorno.Revisione
 # Per esempio: 2025.10.17.1
-NEW_VERSION = "2025.11.22.1" 
+NEW_VERSION = "2025.12.01.1" 
 HTML_DIRECTORY = "./"
 
 # Espressioni regolari per trovare i riferimenti a CSS e JS
