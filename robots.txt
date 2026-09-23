@@ -1,4 +1,4 @@
-# https://traslochimalusardi.it/robots.txt
+# https://www.traslochimalusardi.it/robots.txt
 # Regole di scansione per il sito vetrina F.LLI MALUSARDI.
 
 User-agent: *
@@ -8,4 +8,4 @@ Allow: /
 # "Allow: /" indica che tutti i bot possono scansionare tutte le cartelle e le pagine del tuo sito.
 
 # IMPORTANTE: Indica il percorso completo della tua sitemap
-Sitemap: https://traslochimalusardi.it/sitemap.xml
+Sitemap: https://www.traslochimalusardi.it/sitemap.xml
