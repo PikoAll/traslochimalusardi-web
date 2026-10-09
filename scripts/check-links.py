@@ -51,9 +51,19 @@ def check_sitemap(root):
     return errors
 
 
+def load_known(root):
+    """Known-missing references (baseline) from ROOT/scripts/check-links.known."""
+    known = root / "scripts" / "check-links.known"
+    if not known.exists():
+        return set()
+    lines = known.read_text(encoding="utf-8").splitlines()
+    return {l.strip() for l in lines if l.strip() and not l.lstrip().startswith("#")}
+
+
 def main(argv):
     root = Path(argv[1]) if len(argv) > 1 else Path(__file__).resolve().parent.parent
-    errors = check_pages(root) + check_sitemap(root)
+    known = load_known(root)
+    errors = [e for e in check_pages(root) + check_sitemap(root) if e not in known]
     for e in errors:
         print(e)
     return 1 if errors else 0

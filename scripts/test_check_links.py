@@ -104,6 +104,23 @@ class CheckLinksTest(unittest.TestCase):
         self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
         self.assertIn("fantasma.html", r.stdout)
 
+    def test_known_missing_reference_is_tolerated(self):
+        self.base_site()
+        self.write("index.html", '<img src="images/missing.jpg">')
+        self.write("scripts/check-links.known",
+                   "# baseline\nindex.html -> images/missing.jpg\n")
+        r = self.run_check()
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+
+    def test_new_missing_reference_still_fails_with_baseline(self):
+        self.base_site()
+        self.write("index.html", '<img src="images/missing.jpg"><img src="images/new.jpg">')
+        self.write("scripts/check-links.known", "index.html -> images/missing.jpg\n")
+        r = self.run_check()
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn("index.html -> images/new.jpg", r.stdout)
+        self.assertNotIn("images/missing.jpg", r.stdout)
+
     def test_sitemap_root_maps_to_index(self):
         self.base_site()
         (self.root / "index.html").rename(self.root / "home.html")

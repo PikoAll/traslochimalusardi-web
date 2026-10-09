@@ -1,0 +1,22 @@
+# Known missing local references (baseline). Format: `page.html -> path`.
+# check-links.py tolerates these and fails only on NEW broken references.
+# Remove a line when the file is added/fixed (dedicated card).
+chi-siamo.html -> assets/css/custom-fixes.css
+contatti.html -> assets/css/custom-fixes.css
+galleria.html -> assets/css/custom-fixes.css
+chi-siamo.html -> images/autoscala-milano-strada.webp
+contatti.html -> images/autoscala-milano-strada.webp
+index.html -> images/autoscala-milano-strada.webp
+chi-siamo.html -> images/favicon.png
+contatti.html -> images/favicon.png
+galleria.html -> images/favicon.png
+index.html -> images/favicon.png
+servizi.html -> images/favicon.png
+galleria.html -> images/galleria/lavoro-2.webp
+galleria.html -> images/galleria/lavoro-3.webp
+galleria.html -> images/galleria/lavoro-4.webp
+galleria.html -> images/galleria/lavoro-5.webp
+galleria.html -> images/galleria/lavoro-6.webp
+galleria.html -> images/galleria/lavoro-7.webp
+galleria.html -> images/galleria/lavoro-8.webp
+galleria.html -> images/galleria/lavoro-9.webp
