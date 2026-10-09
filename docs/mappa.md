@@ -34,6 +34,8 @@
 - `galleria.html` —
 - `index.html` —
 - `robots.txt` —
+- `scripts/check-links.py` —
+- `scripts/test_check_links.py` —
 - `servizi.html` —
 - `sitemap.xml` —
 - `update_version.py` —
