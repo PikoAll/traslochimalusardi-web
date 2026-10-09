@@ -1,0 +1,39 @@
+# Mappa del codice
+<!-- generata da scripts/azienda/genera-mappa.sh; righe vuote = da completare, rilancia lo script -->
+
+- `CLAUDE.md` —
+- `CNAME` —
+- `LICENSE.txt` —
+- `README.md` —
+- `README.txt` —
+- `assets/css/fontawesome-all.min.css` —
+- `assets/css/main.css` —
+- `assets/js/breakpoints.min.js` —
+- `assets/js/browser.min.js` —
+- `assets/js/jquery.dropotron.min.js` —
+- `assets/js/jquery.min.js` —
+- `assets/js/jquery.scrollex.min.js` —
+- `assets/js/main.js` —
+- `assets/js/util.js` —
+- `assets/sass/libs/_breakpoints.scss` —
+- `assets/sass/libs/_functions.scss` —
+- `assets/sass/libs/_html-grid.scss` —
+- `assets/sass/libs/_mixins.scss` —
+- `assets/sass/libs/_vars.scss` —
+- `assets/sass/libs/_vendor.scss` —
+- `assets/sass/main.scss` —
+- `assets/webfonts/fa-regular-400.svg` —
+- `chi-siamo.html` —
+- `contatti.html` —
+- `docs/1_vision.md` —
+- `docs/2_architettura.md` —
+- `docs/3_roadmap.md` —
+- `docs/4_sprint_corrente.md` —
+- `docs/5_stato_e_checkpoint.md` —
+- `docs/nota-di-rilascio.md` —
+- `galleria.html` —
+- `index.html` —
+- `robots.txt` —
+- `servizi.html` —
+- `sitemap.xml` —
+- `update_version.py` —
