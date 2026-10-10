@@ -1,41 +1,43 @@
 # Mappa del codice
-<!-- generata da scripts/azienda/genera-mappa.sh; righe vuote = da completare, rilancia lo script -->
+<!-- generata da scripts/azienda/mappa-sonnet.py (prima passata, Sonnet); la manutenzione la fa genera-mappa.sh (Ollama): riempie solo le righe vuote -->
 
-- `CLAUDE.md` —
-- `CNAME` —
-- `LICENSE.txt` —
-- `README.md` —
-- `README.txt` —
-- `assets/css/fontawesome-all.min.css` —
-- `assets/css/main.css` —
-- `assets/js/breakpoints.min.js` —
-- `assets/js/browser.min.js` —
-- `assets/js/jquery.dropotron.min.js` —
-- `assets/js/jquery.min.js` —
-- `assets/js/jquery.scrollex.min.js` —
-- `assets/js/main.js` —
-- `assets/js/util.js` —
-- `assets/sass/libs/_breakpoints.scss` —
-- `assets/sass/libs/_functions.scss` —
-- `assets/sass/libs/_html-grid.scss` —
-- `assets/sass/libs/_mixins.scss` —
-- `assets/sass/libs/_vars.scss` —
-- `assets/sass/libs/_vendor.scss` —
-- `assets/sass/main.scss` —
-- `assets/webfonts/fa-regular-400.svg` —
-- `chi-siamo.html` —
-- `contatti.html` —
-- `docs/1_vision.md` —
-- `docs/2_architettura.md` —
-- `docs/3_roadmap.md` —
-- `docs/4_sprint_corrente.md` —
-- `docs/5_stato_e_checkpoint.md` —
-- `docs/nota-di-rilascio.md` —
-- `galleria.html` —
-- `index.html` —
-- `robots.txt` —
-- `scripts/check-links.py` —
-- `scripts/test_check_links.py` —
-- `servizi.html` —
-- `sitemap.xml` —
-- `update_version.py` —
+- `.claude/settings.json` — Claude Code project permissions: allows gh and git push origin commands, denies rm, force pushes and hard resets.
+- `CLAUDE.md` — Project instructions for agents: read docs, work only on branches and PRs, never delete, main checkout is read-only.
+- `CNAME` — Custom domain www.traslochimalusardi.it used by GitHub Pages to serve the site.
+- `LICENSE.txt` — Creative Commons Attribution 3.0 license text covering the HTML5 UP Alpha template.
+- `README.md` — Project overview: static showcase site structure, how to run it, publishing via GitHub Pages and cache-busting release steps.
+- `README.txt` — Original HTML5 UP Alpha template readme with author notes and credits.
+- `assets/css/fontawesome-all.min.css` — Minified Font Awesome icon font stylesheet used for icons across the pages.
+- `assets/css/main.css` — Compiled main stylesheet of the Alpha template defining the site layout and look.
+- `assets/js/breakpoints.min.js` — Minified breakpoints library that detects responsive media query changes for the template scripts.
+- `assets/js/browser.min.js` — Minified browser and OS detection helper used by the template.
+- `assets/js/jquery.dropotron.min.js` — Minified jQuery plugin providing dropdown menus for the site navigation.
+- `assets/js/jquery.min.js` — Minified jQuery library required by the template scripts and plugins.
+- `assets/js/jquery.scrollex.min.js` — Minified jQuery plugin triggering effects when elements scroll into view.
+- `assets/js/main.js` — Template main script: breakpoints, load animations, dropdown menu, mobile nav panel and banner scroll behavior.
+- `assets/js/util.js` — jQuery utilities for the template: navList link builder, panel slide-out menus and form placeholder helpers.
+- `assets/sass/libs/_breakpoints.scss` — Sass mixins for defining and applying responsive media query breakpoints.
+- `assets/sass/libs/_functions.scss` — Sass helper functions such as list manipulation and variable lookup used by the template.
+- `assets/sass/libs/_html-grid.scss` — Sass mixin generating the 12-column responsive HTML grid classes.
+- `assets/sass/libs/_mixins.scss` — Sass mixins for icons, padding, and other reusable style snippets of the template.
+- `assets/sass/libs/_vars.scss` — Sass variables for sizes, durations, fonts and misc settings of the template.
+- `assets/sass/libs/_vendor.scss` — Sass mixin adding vendor prefixes to CSS properties.
+- `assets/sass/main.scss` — Sass source of the main stylesheet, importing libs and defining all template styles.
+- `assets/webfonts/fa-regular-400.svg` — Font Awesome regular SVG webfont file for legacy browser icon rendering.
+- `chi-siamo.html` — About page presenting the company history, experience and reasons to choose it, with SEO metadata and JSON-LD.
+- `contatti.html` — Contact page with quote request details and company contacts, with SEO metadata and JSON-LD.
+- `docs/1_vision.md` — Project vision: goals, principles and out-of-scope items of the static showcase site.
+- `docs/2_architettura.md` — Architecture overview: static site parts, publishing on GitHub Pages and current checks.
+- `docs/3_roadmap.md` — Roadmap with the quality-site and post-release epics and their planned steps.
+- `docs/4_sprint_corrente.md` — Current sprint note: active epic and first cards in Todo.
+- `docs/5_stato_e_checkpoint.md` — Running log of project status and checkpoints, including the link checker work.
+- `docs/nota-di-rilascio.md` — Release note describing the target user-facing and maintainer-facing outcome of the site.
+- `galleria.html` — Photo gallery page showing recent moving and clearance jobs, with SEO metadata and JSON-LD.
+- `index.html` — Home page presenting the moving, clearance and ladder-lift rental services, with SEO metadata and local business JSON-LD.
+- `robots.txt` — Crawler rules allowing all bots and pointing to the sitemap URL.
+- `scripts/check-links.known` — Baseline of known missing local references tolerated by the link checker.
+- `scripts/check-links.py` — Script checking local href and src references of root HTML pages and sitemap URLs, failing on new broken ones.
+- `scripts/test_check_links.py` — Unit tests for the link checker script covering its exit codes and output.
+- `servizi.html` — Services page listing moving, clearance, ladder-lift rental and furniture assembly offerings, with SEO metadata.
+- `sitemap.xml` — XML sitemap listing the public site URLs with last modification dates for search engines.
+- `update_version.py` — Cache-busting script that adds or updates the version query parameter on CSS and JS references in HTML pages.
